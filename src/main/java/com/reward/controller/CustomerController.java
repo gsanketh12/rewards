@@ -37,6 +37,7 @@ public class CustomerController {
 	@GetMapping("{customerId}")
 	public ResponseEntity<CustomerRewardResponse> getCustomerRewardPoints(@PathVariable String customerId)
 			throws RewardException {
+		System.out.println("Hello");
 		return ResponseEntity.status(HttpStatus.OK.value()).body(customerService.getCustomerRewardPoints(customerId));
 	}
 
